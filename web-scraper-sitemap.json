@@ -1,0 +1,83 @@
+{
+    "_id": "emojipedia",
+    "startUrl": [
+        "https://emojipedia.org/"
+    ],
+    "selectors": [
+        {
+            "id": "categories",
+            "type": "SelectorLink",
+            "parentSelectors": [
+                "_root"
+            ],
+            "selector": "div.block:nth-of-type(1) li a",
+            "multiple": true,
+            "delay": 0
+        },
+        {
+            "id": "category-name",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "categories"
+            ],
+            "selector": ".content h1",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "category-description",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "categories"
+            ],
+            "selector": ".container .content p",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "category-emoji-list",
+            "type": "SelectorLink",
+            "parentSelectors": [
+                "categories"
+            ],
+            "selector": ".emoji-list li a",
+            "multiple": true,
+            "delay": 0
+        },
+        {
+            "id": "emoji",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "category-emoji-list"
+            ],
+            "selector": "h1 span",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "emoji-name",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "category-emoji-list"
+            ],
+            "selector": "article h1",
+            "multiple": false,
+            "regex": "(?<=.{2}).{1,}",
+            "delay": 0
+        },
+        {
+            "id": "emoji-description",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "category-emoji-list"
+            ],
+            "selector": "section.description p",
+            "multiple": true,
+            "regex": "",
+            "delay": 0
+        }
+    ]
+}
