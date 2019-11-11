@@ -74,8 +74,8 @@
             "parentSelectors": [
                 "category-emoji-list"
             ],
-            "selector": "section.description p",
-            "multiple": true,
+            "selector": "section.description",
+            "multiple": false,
             "regex": "",
             "delay": 0
         }
