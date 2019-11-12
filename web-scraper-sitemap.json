@@ -59,13 +59,13 @@
         },
         {
             "id": "emoji-name",
-            "type": "SelectorText",
+            "type": "SelectorHTML",
             "parentSelectors": [
                 "category-emoji-item"
             ],
             "selector": "article h1",
             "multiple": false,
-            "regex": "(?<=.{2}).{1,}",
+            "regex": "(?<=<span class=\"emoji\">.+</span>).+",
             "delay": 0
         },
         {
