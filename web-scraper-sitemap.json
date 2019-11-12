@@ -5,7 +5,7 @@
     ],
     "selectors": [
         {
-            "id": "categories",
+            "id": "category",
             "type": "SelectorLink",
             "parentSelectors": [
                 "_root"
@@ -18,18 +18,18 @@
             "id": "category-name",
             "type": "SelectorText",
             "parentSelectors": [
-                "categories"
+                "category"
             ],
             "selector": ".content h1",
             "multiple": false,
-            "regex": "",
+            "regex": ".{3,}",
             "delay": 0
         },
         {
             "id": "category-description",
             "type": "SelectorText",
             "parentSelectors": [
-                "categories"
+                "category"
             ],
             "selector": ".container .content p",
             "multiple": false,
@@ -37,10 +37,10 @@
             "delay": 0
         },
         {
-            "id": "category-emoji-list",
+            "id": "category-emoji-item",
             "type": "SelectorLink",
             "parentSelectors": [
-                "categories"
+                "category"
             ],
             "selector": ".emoji-list li a",
             "multiple": true,
@@ -50,7 +50,7 @@
             "id": "emoji",
             "type": "SelectorText",
             "parentSelectors": [
-                "category-emoji-list"
+                "category-emoji-item"
             ],
             "selector": "h1 span",
             "multiple": false,
@@ -61,7 +61,7 @@
             "id": "emoji-name",
             "type": "SelectorText",
             "parentSelectors": [
-                "category-emoji-list"
+                "category-emoji-item"
             ],
             "selector": "article h1",
             "multiple": false,
@@ -72,11 +72,11 @@
             "id": "emoji-description",
             "type": "SelectorText",
             "parentSelectors": [
-                "category-emoji-list"
+                "category-emoji-item"
             ],
             "selector": "section.description",
             "multiple": false,
-            "regex": "",
+            "regex": "(.+\\n{1,})+(?=Copy and paste this emoji:)",
             "delay": 0
         }
     ]
