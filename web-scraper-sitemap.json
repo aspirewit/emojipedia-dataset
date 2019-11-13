@@ -15,6 +15,17 @@
             "delay": 0
         },
         {
+            "id": "category-emoji-character",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "category"
+            ],
+            "selector": "h1 span",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
             "id": "category-name",
             "type": "SelectorText",
             "parentSelectors": [
@@ -47,7 +58,7 @@
             "delay": 0
         },
         {
-            "id": "emoji",
+            "id": "emoji-character",
             "type": "SelectorText",
             "parentSelectors": [
                 "category-emoji-item"
@@ -77,6 +88,72 @@
             "selector": "section.description",
             "multiple": false,
             "regex": "(.+\\n{1,})+(?=Copy and paste this emoji:)",
+            "delay": 0
+        },
+        {
+            "id": "emoji-name-aliases",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "category-emoji-item"
+            ],
+            "selector": "section.aliases ul",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "emoji-apple-name",
+            "type": "SelectorHTML",
+            "parentSelectors": [
+                "category-emoji-item"
+            ],
+            "selector": ".applenames p",
+            "multiple": false,
+            "regex": "(?<=<span class=\"emoji\">.+</span>).+",
+            "delay": 0
+        },
+        {
+            "id": "emoji-unicode-name",
+            "type": "SelectorHTML",
+            "parentSelectors": [
+                "category-emoji-item"
+            ],
+            "selector": ".unicodename p",
+            "multiple": false,
+            "regex": "(?<=<span class=\"emoji\">.+</span>).+",
+            "delay": 0
+        },
+        {
+            "id": "emoji-codepoints",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "category-emoji-item"
+            ],
+            "selector": "article > ul:nth-of-type(1)",
+            "multiple": false,
+            "regex": "U\\+.+",
+            "delay": 0
+        },
+        {
+            "id": "emoji-shortcodes",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "category-emoji-item"
+            ],
+            "selector": ".shortcodes",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "emoji-references",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "category-emoji-item"
+            ],
+            "selector": "ul:nth-of-type(3)",
+            "multiple": false,
+            "regex": "",
             "delay": 0
         }
     ]
