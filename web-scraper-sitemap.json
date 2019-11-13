@@ -10,7 +10,7 @@
             "parentSelectors": [
                 "_root"
             ],
-            "selector": "div.block:nth-of-type(1) li a",
+            "selector": "h2:contains('Categories') + ul li a",
             "multiple": true,
             "delay": 0
         },
@@ -20,7 +20,7 @@
             "parentSelectors": [
                 "category"
             ],
-            "selector": "h1 span",
+            "selector": ".container .content h1 span.emoji",
             "multiple": false,
             "regex": "",
             "delay": 0
@@ -31,7 +31,7 @@
             "parentSelectors": [
                 "category"
             ],
-            "selector": ".content h1",
+            "selector": ".container .content h1",
             "multiple": false,
             "regex": ".{3,}",
             "delay": 0
@@ -53,7 +53,7 @@
             "parentSelectors": [
                 "category"
             ],
-            "selector": ".emoji-list li a",
+            "selector": ".container .content .emoji-list li a",
             "multiple": true,
             "delay": 0
         },
@@ -63,7 +63,7 @@
             "parentSelectors": [
                 "category-emoji-item"
             ],
-            "selector": "h1 span",
+            "selector": "article h1 span",
             "multiple": false,
             "regex": "",
             "delay": 0
@@ -129,9 +129,9 @@
             "parentSelectors": [
                 "category-emoji-item"
             ],
-            "selector": "article > ul:nth-of-type(1)",
+            "selector": "h2:contains('Codepoints') + ul",
             "multiple": false,
-            "regex": "U\\+.+",
+            "regex": "",
             "delay": 0
         },
         {
@@ -140,7 +140,7 @@
             "parentSelectors": [
                 "category-emoji-item"
             ],
-            "selector": ".shortcodes",
+            "selector": "ul.shortcodes",
             "multiple": false,
             "regex": "",
             "delay": 0
@@ -151,7 +151,7 @@
             "parentSelectors": [
                 "category-emoji-item"
             ],
-            "selector": "ul:nth-of-type(3)",
+            "selector": "h2:contains('See also') + ul",
             "multiple": false,
             "regex": "",
             "delay": 0
